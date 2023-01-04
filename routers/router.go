@@ -1,8 +1,8 @@
 package routers
 
 import (
+	"Video/controllers"
 	"github.com/astaxie/beego"
-	"video/controllers"
 )
 
 func init() {

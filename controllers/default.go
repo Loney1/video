@@ -1,9 +1,9 @@
 package controllers
 
 import (
+	"Video/models"
+	"Video/utils"
 	"fmt"
-	"video/models"
-	"video/utils"
 
 	"github.com/astaxie/beego"
 )
@@ -14,7 +14,7 @@ type MainController struct {
 
 // @router /index [get]
 func (this *MainController) Get() {
-	fmt.Println("获取页面信息")
+	fmt.Println("获取毕设页面信息")
 	//前后端分离
 	//获取顶部视频推荐广告，调用接口
 	advertVideos := models.GetChannelAdvert(1)

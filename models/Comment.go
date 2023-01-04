@@ -1,9 +1,9 @@
 package models
 
 import (
+	"Video/utils"
 	"fmt"
 	"strconv"
-	"video/utils"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/httplib"
