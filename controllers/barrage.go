@@ -2,11 +2,11 @@ package controllers
 
 import (
 	"encoding/json"
-	"github.com/astaxie/beego"
-	"github.com/gorilla/websocket"
+	"net/http"
 	"video/models"
 
-	"net/http"
+	"github.com/astaxie/beego"
+	"github.com/gorilla/websocket"
 )
 
 type BarrageController struct {

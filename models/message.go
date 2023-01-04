@@ -36,6 +36,18 @@ func SendMessageDo(content string) (int64, error) {
 	return messageId, err
 }
 
+//保存消息接收人
+func SendMessageUser(userId int, messageId int64) error {
+	o := orm.NewOrm()
+	var messageUser MessageUser
+	messageUser.UserId = userId
+	messageUser.MessageId = messageId
+	messageUser.Status = 1
+	messageUser.AddTime = time.Now().Unix()
+	_, err := o.Insert(&messageUser)
+	return err
+}
+
 //保存消息接收人到队列中
 func SendMessageUserMq(userId int, messageId int64) {
 	//把数据转换成json字符串
@@ -47,5 +59,5 @@ func SendMessageUserMq(userId int, messageId int64) {
 	data.UserId = userId
 	data.MessageId = messageId
 	dataJson, _ := json.Marshal(data)
-	mq.Publish("", "video_send_message_user", string(dataJson))
+	mq.Publish("", "fyouku_send_message_user", string(dataJson))
 }

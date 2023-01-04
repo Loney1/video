@@ -56,7 +56,7 @@ func SaveComment(content string, uid int, episodesId int, videoId int) error {
 			"VideoId": videoId,
 		}
 		videoJson, _ := json.Marshal(videoObj)
-		mq.Publish("", "video_top", string(videoJson))
+		mq.Publish("", "fyouku_top", string(videoJson))
 
 		//延迟增加评论数
 		videoCountObj := map[string]int{
@@ -64,7 +64,7 @@ func SaveComment(content string, uid int, episodesId int, videoId int) error {
 			"EpisodesId": episodesId,
 		}
 		videoCountJson, _ := json.Marshal(videoCountObj)
-		mq.PublishDlx("video.comment.count", string(videoCountJson))
+		mq.PublishDlx("fyouku.comment.count", string(videoCountJson))
 	}
 	return err
 }

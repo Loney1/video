@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"],
+	beego.GlobalControllerRouter["video/controllers:BarrageController"] = append(beego.GlobalControllerRouter["video/controllers:BarrageController"],
 		beego.ControllerComments{
 			Method:           "Save",
 			Router:           "/barrage/save",
@@ -16,7 +16,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"],
+	beego.GlobalControllerRouter["video/controllers:BarrageController"] = append(beego.GlobalControllerRouter["video/controllers:BarrageController"],
 		beego.ControllerComments{
 			Method:           "BarrageWs",
 			Router:           "/barrage/ws",
@@ -25,7 +25,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BaseController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BaseController"],
+	beego.GlobalControllerRouter["video/controllers:BaseController"] = append(beego.GlobalControllerRouter["video/controllers:BaseController"],
 		beego.ControllerComments{
 			Method:           "ChannelRegion",
 			Router:           "/channel/region",
@@ -34,7 +34,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BaseController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BaseController"],
+	beego.GlobalControllerRouter["video/controllers:BaseController"] = append(beego.GlobalControllerRouter["video/controllers:BaseController"],
 		beego.ControllerComments{
 			Method:           "ChannelType",
 			Router:           "/channel/type",
@@ -43,7 +43,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "List",
 			Router:           "/comment/list",
@@ -52,7 +52,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "Save",
 			Router:           "/comment/save",
@@ -61,7 +61,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "SaveAll",
 			Router:           "/comment/save/all",
@@ -70,7 +70,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:TopController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:TopController"],
+	beego.GlobalControllerRouter["video/controllers:TopController"] = append(beego.GlobalControllerRouter["video/controllers:TopController"],
 		beego.ControllerComments{
 			Method:           "ChannelTop",
 			Router:           "/channel/top",
@@ -79,7 +79,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:TopController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:TopController"],
+	beego.GlobalControllerRouter["video/controllers:TopController"] = append(beego.GlobalControllerRouter["video/controllers:TopController"],
 		beego.ControllerComments{
 			Method:           "TypeTop",
 			Router:           "/type/top",
@@ -88,7 +88,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "LoginDo",
 			Router:           "/login/do",
@@ -97,7 +97,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "SaveRegister",
 			Router:           "/register/save",
@@ -106,7 +106,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "SendMessageDo",
 			Router:           "/send/message",
@@ -115,7 +115,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelAdvert",
 			Router:           "/channel/advert",
@@ -124,7 +124,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelHotList",
 			Router:           "/channel/hot",
@@ -133,7 +133,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelRecommendRegionList",
 			Router:           "/channel/recommend/region",
@@ -142,7 +142,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "GetChannelRecomendTypeList",
 			Router:           "/channel/recommend/type",
@@ -151,7 +151,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelVideo",
 			Router:           "/channel/video",
@@ -160,7 +160,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "UserVideo",
 			Router:           "/user/video",
@@ -169,7 +169,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoEpisodesList",
 			Router:           "/video/episodes/list",
@@ -178,7 +178,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoInfo",
 			Router:           "/video/info",
@@ -187,7 +187,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoSave",
 			Router:           "/video/save",
@@ -196,7 +196,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "SaveAll",
 			Router:           "/video/save/all",
@@ -205,7 +205,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "Search",
 			Router:           "/video/search",
@@ -214,7 +214,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "SendEs",
 			Router:           "/video/send/es",

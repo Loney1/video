@@ -6,208 +6,221 @@ import (
 )
 
 func init() {
-	beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"],
+
+	beego.GlobalControllerRouter["video/controllers:BarrageController"] = append(beego.GlobalControllerRouter["video/controllers:BarrageController"],
 		beego.ControllerComments{
 			Method:           "Save",
-			Router:           `/barrage/save`,
+			Router:           "/barrage/save",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BarrageController"],
+	beego.GlobalControllerRouter["video/controllers:BarrageController"] = append(beego.GlobalControllerRouter["video/controllers:BarrageController"],
 		beego.ControllerComments{
 			Method:           "BarrageWs",
-			Router:           `/barrage/ws`,
+			Router:           "/barrage/ws",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BaseController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BaseController"],
+	beego.GlobalControllerRouter["video/controllers:BaseController"] = append(beego.GlobalControllerRouter["video/controllers:BaseController"],
 		beego.ControllerComments{
 			Method:           "ChannelRegion",
-			Router:           `/channel/region`,
+			Router:           "/channel/region",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:BaseController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:BaseController"],
+	beego.GlobalControllerRouter["video/controllers:BaseController"] = append(beego.GlobalControllerRouter["video/controllers:BaseController"],
 		beego.ControllerComments{
 			Method:           "ChannelType",
-			Router:           `/channel/type`,
+			Router:           "/channel/type",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "List",
-			Router:           `/comment/list`,
+			Router:           "/comment/list",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "Save",
-			Router:           `/comment/save`,
+			Router:           "/comment/save",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:CommentController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:CommentController"],
+	beego.GlobalControllerRouter["video/controllers:CommentController"] = append(beego.GlobalControllerRouter["video/controllers:CommentController"],
 		beego.ControllerComments{
 			Method:           "SaveAll",
-			Router:           `/comment/save/all`,
+			Router:           "/comment/save/all",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:TopController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:TopController"],
+	beego.GlobalControllerRouter["video/controllers:TopController"] = append(beego.GlobalControllerRouter["video/controllers:TopController"],
 		beego.ControllerComments{
 			Method:           "ChannelTop",
-			Router:           `/channel/top`,
+			Router:           "/channel/top",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:TopController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:TopController"],
+	beego.GlobalControllerRouter["video/controllers:TopController"] = append(beego.GlobalControllerRouter["video/controllers:TopController"],
 		beego.ControllerComments{
 			Method:           "TypeTop",
-			Router:           `/type/top`,
+			Router:           "/type/top",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "LoginDo",
-			Router:           `/login/do`,
+			Router:           "/login/do",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "SaveRegister",
-			Router:           `/register/save`,
+			Router:           "/register/save",
 			AllowHTTPMethods: []string{"post"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserController"],
+	beego.GlobalControllerRouter["video/controllers:UserController"] = append(beego.GlobalControllerRouter["video/controllers:UserController"],
 		beego.ControllerComments{
 			Method:           "SendMessageDo",
-			Router:           `/send/message`,
+			Router:           "/send/message",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:UserRpcController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:UserRpcController"],
-		beego.ControllerComments{
-			Method:           "LoginDo",
-			Router:           `/login/do`,
-			AllowHTTPMethods: []string{"*"},
-			MethodParams: param.Make(
-				param.New("ctx"),
-				param.New("req"),
-				param.New("res"),
-			),
-			Params: nil})
-
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelAdvert",
-			Router:           `/channel/advert`,
+			Router:           "/channel/advert",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelHotList",
-			Router:           `/channel/hot`,
+			Router:           "/channel/hot",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelRecommendRegionList",
-			Router:           `/channel/recommend/region`,
+			Router:           "/channel/recommend/region",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "GetChannelRecomendTypeList",
-			Router:           `/channel/recommend/type`,
+			Router:           "/channel/recommend/type",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "ChannelVideo",
-			Router:           `/channel/video`,
+			Router:           "/channel/video",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "UserVideo",
-			Router:           `/user/video`,
+			Router:           "/user/video",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoEpisodesList",
-			Router:           `/video/episodes/list`,
+			Router:           "/video/episodes/list",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoInfo",
-			Router:           `/video/info`,
+			Router:           "/video/info",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "VideoSave",
-			Router:           `/video/save`,
+			Router:           "/video/save",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "SaveAll",
-			Router:           `/video/save/all`,
+			Router:           "/video/save/all",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "Search",
-			Router:           `/video/search`,
+			Router:           "/video/search",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["VideoApi/controllers:VideoController"] = append(beego.GlobalControllerRouter["VideoApi/controllers:VideoController"],
+	beego.GlobalControllerRouter["video/controllers:VideoController"] = append(beego.GlobalControllerRouter["video/controllers:VideoController"],
 		beego.ControllerComments{
 			Method:           "SendEs",
-			Router:           `/video/send/es`,
+			Router:           "/video/send/es",
 			AllowHTTPMethods: []string{"*"},
 			MethodParams:     param.Make(),
+			Filters:          nil,
 			Params:           nil})
 
 }

@@ -3,8 +3,9 @@ package controllers
 import (
 	"crypto/md5"
 	"encoding/hex"
-	"github.com/astaxie/beego"
 	"time"
+
+	"github.com/astaxie/beego"
 )
 
 // Operations about Users
